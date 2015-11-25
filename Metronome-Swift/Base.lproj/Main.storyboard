@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Metronome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="MetronomeViewController" customModule="Metronome_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="X1s-Fr-ZPz">
+                                <rect key="frame" x="253" y="327" width="94" height="29"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="tempoChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="gPi-fu-pbZ"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6e-HS-q4j">
+                                <rect key="frame" x="253" y="463" width="100" height="100"/>
+                                <animations/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="toggleMetronome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJ3-4z-1Je"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="60" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5i9-Da-iIc">
+                                <rect key="frame" x="16" y="106" width="568" height="166"/>
+                                <animations/>
+                                <color key="textColor" red="0.23539334873768947" green="1" blue="0.090022966708489971" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="140"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JE-YB-ghl">
+                                <rect key="frame" x="166" y="329" width="62" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="TSK-Qg-fmY"/>
+                                    <constraint firstAttribute="height" constant="21" id="mCi-HB-2wX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2353933487" green="1" blue="0.090022966709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TSK-Qg-fmY"/>
+                                        <exclude reference="mCi-HB-2wX"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="LRX Trainer Tools- Metronome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEU-mD-ugl">
+                                <rect key="frame" x="112" y="42" width="376" height="56"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="Foi-iu-yeQ"/>
+                                    <constraint firstAttribute="height" constant="56" id="NYM-ar-BYm"/>
+                                    <constraint firstAttribute="width" secondItem="xEU-mD-ugl" secondAttribute="height" multiplier="47:7" id="uZk-Cv-V6J"/>
+                                </constraints>
+                                <color key="textColor" red="0.2353933487" green="1" blue="0.090022966709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Foi-iu-yeQ"/>
+                                        <exclude reference="NYM-ar-BYm"/>
+                                        <exclude reference="uZk-Cv-V6J"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.81605300359999999" green="0.47139070249999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5i9-Da-iIc" secondAttribute="trailing" constant="16" id="4ju-RC-Jff"/>
+                            <constraint firstItem="8JE-YB-ghl" firstAttribute="top" secondItem="5i9-Da-iIc" secondAttribute="bottom" constant="95" id="5Qp-jo-Yqj"/>
+                            <constraint firstAttribute="centerX" secondItem="5i9-Da-iIc" secondAttribute="centerX" id="9d4-Jm-nvw"/>
+                            <constraint firstAttribute="centerX" secondItem="k6e-HS-q4j" secondAttribute="centerX" id="IwE-LX-jVf"/>
+                            <constraint firstItem="k6e-HS-q4j" firstAttribute="top" secondItem="X1s-Fr-ZPz" secondAttribute="bottom" constant="20" id="UQx-wn-N1g"/>
+                            <constraint firstItem="8JE-YB-ghl" firstAttribute="top" secondItem="xEU-mD-ugl" secondAttribute="bottom" constant="275" id="Ukk-Cq-Gmo"/>
+                            <constraint firstItem="X1s-Fr-ZPz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="275" id="WYA-er-xzu"/>
+                            <constraint firstItem="5i9-Da-iIc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="cxZ-kR-UeJ"/>
+                            <constraint firstItem="k6e-HS-q4j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="300" id="eYh-E0-p4L"/>
+                            <constraint firstItem="5i9-Da-iIc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="eiU-hw-anN"/>
+                            <constraint firstAttribute="centerX" secondItem="X1s-Fr-ZPz" secondAttribute="centerX" id="gej-O5-3X6"/>
+                            <constraint firstItem="8JE-YB-ghl" firstAttribute="top" secondItem="5i9-Da-iIc" secondAttribute="bottom" constant="75" id="iEG-rh-E4Z"/>
+                            <constraint firstItem="k6e-HS-q4j" firstAttribute="top" secondItem="5i9-Da-iIc" secondAttribute="bottom" constant="200" id="ngY-U3-2An"/>
+                            <constraint firstItem="8JE-YB-ghl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tK4-Tz-hR6"/>
+                            <constraint firstItem="xEU-mD-ugl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vGN-5A-Xxr"/>
+                            <constraint firstItem="X1s-Fr-ZPz" firstAttribute="leading" secondItem="8JE-YB-ghl" secondAttribute="trailing" constant="10" id="vZq-vw-bKg"/>
+                            <constraint firstItem="xEU-mD-ugl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="veC-bc-Iic"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Qp-jo-Yqj"/>
+                                <exclude reference="Ukk-Cq-Gmo"/>
+                                <exclude reference="tK4-Tz-hR6"/>
+                                <exclude reference="UQx-wn-N1g"/>
+                                <exclude reference="eYh-E0-p4L"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tempoStepper" destination="X1s-Fr-ZPz" id="kUo-EH-8BZ"/>
+                        <outlet property="tempoTextField" destination="5i9-Da-iIc" id="NJ6-pP-z18"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="305" y="357"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Play" width="100" height="100"/>
+    </resources>
+</document>
